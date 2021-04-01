@@ -1,0 +1,92 @@
+@charset "UTF-8";
+body{
+	height:800px;
+}
+li{
+  list-style: none;
+}
+.successOrder{
+    width: fit-content;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 75px;
+    /* border: 1px solid #ccc; */
+    padding: 40px 50px 30px 50px;
+    box-shadow: 1px 1px 3px 1px #d8d6d6;
+}
+.successTitle .icon1{
+    margin: 20px;
+}
+.successTitle .success_icon{
+    font-size: 130px;
+    color: rgb(237,217,217);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 3);
+}
+.successTitle span{
+    display: inline-block;
+    color: #555;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.successTitle h2{
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+.successContent{
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+}
+
+/*進度條*/
+.chart_box{
+  margin-top: 250px;
+}
+li.circle_box{
+	width: 60px;
+    height: 60px;
+    background:#aaa;
+    border-radius: 50%;;
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+    color: #eee;
+}
+ul.shop_list{
+  position: relative;
+}
+ul.shop_list li+li{
+  margin-left: 100px;
+}
+ul.shop_list .step2::before{
+  content: '';
+    width: 88px;
+    height: 1px;
+    left: 25%;
+    top: 50%;
+    position: absolute;
+    background: #ccc;
+    vertical-align: middle;
+}
+ul.shop_list .step3::before{
+  content: '';
+    width: 88px;
+    height: 1px;
+    left: 63%;
+    top: 50%;
+    position: absolute;
+    background: #ccc;
+    vertical-align: middle;
+}
+.chart_name{
+	display: inline-block;
+    color: #444;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+ul.shop_list .step1, ul.shop_list  .step2{
+  color: #777;
+  background: white;
+  border: 1px solid #d2d2d2;
+}

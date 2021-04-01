@@ -1,0 +1,67 @@
+/* 功能選單 */
+.administrator{
+    margin-top: 250px;   /*拉出上方距離*/             
+    display: flex;
+}
+
+
+/* adinfo */
+.adinfo {
+    /* width: 800px; */
+    /* border: 2px solid #aaa; 
+    border-radius: 20px; */
+    margin-left: 30px;
+    margin-bottom: 2rem;
+}
+.adinfo fieldset{
+ height: 320px;  
+ border-radius: 20px;
+ margin-bottom: 2rem;
+ border: 2px solid #333;
+}
+.adinfo legend {
+    font-size: 24px;
+    width: 150px;
+}
+.adinfo-mid {
+    font-size: 20px;
+    margin-bottom: 2rem;
+    padding-left: 5px;
+}
+.adinfo-mid input {
+    width: 480px;
+    height: 30px;
+    margin-left: 4rem;
+}
+.adinfo-photo:hover {
+    color: red;
+    transition: .3s;
+    cursor: pointer;
+}
+.adinfo-button {
+    width: 100px;
+    height: 50px;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-top: 50px;
+    margin-left: 700px;
+    border-radius: 5px;
+}
+.adinfo-button:hover {
+    background:rgb(170, 192, 207);
+    transition: .3s;
+    color: red;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.ad-photo {
+    margin-left: 1.5rem;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 3px;
+    
+}
+
+.slider-x{
+    width: 200px;
+}

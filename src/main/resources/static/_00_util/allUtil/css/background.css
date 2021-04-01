@@ -1,0 +1,11 @@
+@charset "UTF-8";
+body {
+    /* height: 1500px; */
+    font-family: "微軟正黑體";
+    background-image: url(background_shop.png);
+    margin-top: 13rem;
+/* 	background:pink; */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -1,0 +1,693 @@
+@charset "UTF-8";
+/* 全域border box  使padding內縮  */
+/* 含偽元素*/
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+}
+body {
+    /* height: 1500px; */
+    margin-top: 13rem;
+    font-family: "微軟正黑體";
+}
+
+/* 回到上方的按鈕 */
+/* .toTop {
+  position: fixed;
+  font-size: 3rem;
+  right: 1rem;
+  bottom: 1rem;
+} */
+#go-top {
+	position: fixed;  /* 畫面滾動時一直出現 */
+    right: 20px;
+    bottom: 35px;
+    width: 40px;
+    height: 40px;
+    background:rgba(123,136,111,0.3);
+    color:#fff;
+    text-align: center;  /* 左右置中 */
+    line-height: 40px;   /* 上下置中 */
+    text-decoration: none;
+    border-radius: 50%;
+}
+#go-top:hover{
+    background:rgba(123,136,111,1);
+}
+
+header {
+  /* background: #ccc; */
+  width: 100%;
+  /* 使頁首定在body上方 */
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+header nav {
+  background-color: black;
+}
+
+header nav .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.25rem 0.5rem;
+  margin: 0 1rem;
+}
+
+header nav .navbar .ig-links {
+  font-size: 0.875rem;
+}
+
+header nav .navbar .ig-links a {
+  padding: 0 0.15rem;
+  color: white;
+}
+
+header nav .navbar .ig-links a:first-child {
+  border-right: 1px solid #ccc;
+  padding-right: 0.5rem;
+}
+
+header nav .navbar .ig-links a img {
+  vertical-align: text-bottom;
+}
+
+header nav .navbar .ig-links a:hover {
+  color: orange;
+}
+
+header nav .navbar .space {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+}
+
+header nav .navbar .links {
+  font-size: 0.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav .navbar .links a {
+  color: white;
+  margin: 0 0.3rem;
+}
+
+header nav .navbar .links a i {
+  margin-right: 0.25rem;
+}
+
+header nav .navbar .links a:hover {
+  color: orange;
+}
+
+header .search {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .search .search-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .search .search-wrap .logo-wrap {
+  max-width: 200px;
+}
+
+header .search .search-wrap .logo-wrap img {
+  width: 90%;
+  vertical-align: bottom;
+  cursor: pointer;
+}
+
+header .search .search-wrap .search-food {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .search .search-wrap .search-food .search-input {
+  border: 2px solid #aaa;
+  border-radius: 100px;   
+  padding-left: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+header .search .search-wrap .search-food .search-input input, header .search .search-wrap .search-food .search-input button {
+  background-color: transparent;
+  color: #aaad;
+  border: none;
+  height: 2rem;
+}
+
+header .search .search-wrap .search-food .search-input input {
+  width: 40rem;
+}
+
+header .search .search-wrap .search-food .search-input input:focus {
+  outline: none;
+}
+
+header .search .search-wrap .search-food .search-input button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+header .search .search-wrap .search-food .food-trending a {
+  color: black;
+  font-size: 0.875rem;
+  padding: 0 1rem;
+}
+
+header .search .search-wrap .search-food .food-trending a:hover {
+  color: orange;
+}
+
+header .search .search-wrap .search-ticket {
+  max-width: 200px;
+  position: relative;
+  margin-left: 0.5rem;
+  /* 父層被hover 子層做事情*/
+}
+
+header .search .search-wrap .search-ticket img {
+  width: 100%;
+  vertical-align: bottom;
+  opacity: 0.2;
+  
+  
+}
+
+header .search .search-wrap .search-ticket .txt {
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  font-size: 0.8rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  /* 使文字垂直居中 */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* x軸居中對齊 */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* y軸居中對齊 */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .search .search-wrap .search-ticket .txt h2 {
+  color: #555555;
+}
+/* 鼠標一上去出現優惠券專區背景 */
+/* header .search .search-wrap .search-ticket:hover .txt {
+  background-color: #ccc;
+  opacity: 0.7;
+} */
+
+header .search .search-wrap .search-ticket:hover .txt h2 {
+  color: black;
+}
+
+header .search .search-wrap .member {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .search .search-wrap .member a {
+  padding: 0 1rem;
+  color: black;
+}
+
+header .search .search-wrap .member a:first-child {
+  border-right: 1px solid black;
+}
+
+header .search .search-wrap .member a:last-child {
+  display: block;
+  padding: 0;
+}
+
+header .search .search-wrap .member a:last-child i {
+  
+  font-size: 1.8rem;
+  color: #555;
+}
+
+header .search .search-wrap .member a:hover {
+  color: orange;
+}
+/*夜市簡介 背景 */
+/* header .tab {
+  background-color: black; 
+} */
+
+header .tab .tab-warp {
+  position: relative;
+}
+
+header .tab .tab-warp .tab-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .tab .tab-warp .tab-list a {
+  font-size: 1rem;
+  text-align: center;
+  color: #444444;
+  width: 11rem;
+  padding: 1rem 0rem;
+}
+
+header .tab .tab-warp .tab-content {
+  background-color: #eee;
+  position: absolute;
+  
+  /* 調整左邊 border線 與導覽列同X軸 */
+/*   left: 15%; */
+  /* 控制右邊 border線 */
+  width: 11rem;
+}
+
+header .tab .tab-warp .tab-content .tab-panel {
+  box-shadow:1px 1px 2px 2px #fff;	
+  text-align: center;
+  /* border: 2px solid #ccc; */
+  padding: 0 1rem;
+  display: none;
+}
+
+/* 下拉選單字型設定 */
+header .tab .tab-warp .tab-content .tab-panel a{
+  letter-spacing: 1px;
+  display: inline-block;
+  margin: 3px 0;
+  color: #444444;
+  transition: .1s;
+}
+
+header .tab .tab-warp .tab-content .tab-panel a:hover{
+  font-size: 1.1rem;
+  background-color: #e2e2e2;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+
+
+/*** addClass 類別使用 ****/
+.liColor {
+  background-color: rgba(206, 16, 16, 0.5);
+}
+
+/* iPhone XS Max Viewport RWD 414*896 */
+@media (max-width: 415px) {
+  header nav .navbar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header nav .navbar .ig-links a {
+    padding: 0 0.2em;
+  }
+  header nav .navbar .space {
+    color: white;
+  }
+  header nav .navbar .links li {
+    padding: 0 1em;
+  }
+}
+
+/* 搜尋頁面開始 */
+
+.nav-first{
+  display: flex;
+  padding: 5px 50px;
+  font-weight: bolder;
+  font-size: 20px;
+
+}
+.nav-first h5{
+  padding-left: 15px;
+  padding-top: 3px;
+}
+
+.nav-first h4{
+  font-weight: bolder;
+  padding:  5px;
+  padding-top: 4px;
+}
+
+
+#tabs-nav a{
+  text-decoration: none;
+}
+
+/* --------------------------------------------------------------- */
+
+#main_tabs{
+  /* border: 1px solid red; */
+
+}
+
+#tabs-nav{
+  border-bottom: 1px solid #ccc;
+	
+  display: flex;
+  justify-content: center;
+  
+}
+#tabs-nav a{
+  font-weight: bolder;
+  font-size: 20px;
+  padding: 25px 25px;
+  border-radius: 10px;
+}
+
+/* 依夜市搜尋開始*/
+
+.keyword{
+  /* border: 1px solid red; */
+
+  font-weight: bolder;
+  font-size: 20px;
+  line-height: 50px;
+  text-align: center;
+}
+.keyword-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.keyword-form a{
+  padding: 0 10px;
+  font-size: 1rem;
+
+/*   font-weight:lighter; */
+  font-weight: bolder;
+}
+
+
+.keyword-form input{
+  border: 1px solid #ccc; 
+  background-color: #fff;
+  font-size: 1rem;
+  font-weight: bolder;
+  
+/*   font-weight:lighter; */
+
+}
+.keyword-form input:hover{
+  background-color: #ccc;
+}
+.keyword-form input:focus{
+  outline: none;
+}
+
+
+.findNight{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+ 
+.findNight-item{
+  margin-bottom: 20px;
+}
+
+.findNight h2{
+  font-weight: bolder;
+  font-size: 3rem;
+}
+.findNight p{
+  font-weight: bolder;
+  width: 600px;
+  line-height: 40px;
+}
+
+/* 依夜市搜尋結束*/
+
+/* 依優惠券搜尋開始*/
+.coupon{
+  background-color: rgba(204, 186, 186, 0.253);
+  margin: 0px 25px 25px 25px;  /*上右下左*/
+  display: flex;
+
+}
+.coupon img{
+  width: 700px;
+  height: 300px;
+  border-radius: 20px;
+  vertical-align: bottom;
+}
+
+.coupon-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.coupon-info div{
+  font-weight: bolder;
+  display: flex;
+  flex: 1;
+  width: 25rem;
+  padding: 15px;
+  margin-left: 25px;
+}
+
+.coupon-info .name{
+
+}
+
+/* 依優惠券搜尋結束*/
+
+/* 搜尋商品頁面開始 */
+
+.product-price{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.productType-link{
+  
+}
+
+.product-price input{
+  border: 1px solid #ccc; 
+  background-color: #fff;
+  font-size: 1rem;
+  font-weight:lighter;
+  width: 10rem;
+  height: 2rem;
+}	
+
+.product-price form a{
+  padding: 0 0.8rem;
+  
+}
+.search-submit{
+  margin-left: -5px;
+  vertical-align: bottom;
+  padding-right: 5px;
+}
+
+
+.product-price input:hover{
+  background-color: #ccc;
+}
+
+.product-price input:focus{
+  outline: none;
+}
+
+.product-container{
+/*   border: 1px solid red; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+  margin: 0 58.5px;
+
+}
+
+.product{
+  border: 1px solid #ccc;
+  
+  /* flex-grow: 1; */
+  width: 280px;
+  height: 370px;
+  text-align: center;
+  margin-bottom: 25px;
+
+  font-weight: bold;
+
+}
+.product:hover{
+  background-color: #E8FFC4;
+}
+.product div{
+  margin: 5px;
+  padding: 5px;
+}
+
+.product img{
+	width: 200px;
+	height: 200px;
+}
+
+.product .price{
+  color: red;
+}
+
+
+/* 依商品類型開始 */
+#product-type{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#product-type a{
+  border-radius: 5px;
+  width: 5rem;
+  height: 2rem;
+  text-align: center;
+  line-height: 2rem;
+}
+
+
+/* 依商品類型結束 */
+
+
+
+/* 依商家開始 */
+
+/* 依商家結束 */
+
+
+
+/* 依商家類型開始 */
+
+#shop-type{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#shop-type a{
+  border-radius: 5px;
+  width: 6rem;
+  height: 2rem;
+  text-align: center;
+  line-height: 2rem;
+}
+
+/* 依商家類型結束 */
+
+
+
+
+
+
+
+/* 一開始先讓其他的子元素消失起來  只留下第一個tabs-panel元素 */
+.tabs-content .tabs-panel{
+  display: none;
+}
+
+#tabs-nav .change{
+  background-color: orange;
+  color: white;
+}
+
+/* product-type 專用class */
+.type-content .type-panel{
+  display: none;
+}
+
+#product-type .change{
+  background-color: #ccc;
+  color: white;
+}
+
+
+/* shoptype 專用class */
+.shoptype-content .shoptype-panel{
+  display: none;
+}
+
+#shop-type .change{
+  background-color: #ccc;
+  color: white;
+}
+
+
+
+
+/************ CSS Animation ***********/
+
+.animated-tabs{
+  animation-duration: 1.5s;
+  animation-fill-mode:forwards;   /*forwards 就是動畫結束後保持最後結束的樣子*/
+}
+.fadeIn { 
+  animation-name: fadeIn; 
+}
+
+@keyframes fadeIn { 
+  0% {opacity: 0;} 
+  100% {opacity: 1;} 
+} 

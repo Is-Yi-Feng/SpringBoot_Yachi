@@ -1,0 +1,361 @@
+
+.main-member {
+    max-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 10rem;
+    margin-bottom: 70px;
+  }
+  
+  .main-member aside {
+    /* border: 1px solid #CCC; */
+    width: 500px;
+    /* background-color: #ccc; */
+    text-align: center;
+  }
+  
+  .main-member aside .function {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  
+  .main-member aside .function h3 {
+    font-size: 24px;
+    padding: 20px 0;
+    font-weight: bolder;
+  }
+  
+  .main-member aside .function .item:last-child {
+    margin-top: 125px;
+  }
+  
+  .main-member aside .function .item img {
+    vertical-align: bottom;
+  }
+  
+  .main-member aside .function .item img:hover {
+    opacity: 0.5;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  .main-member aside .function .item a button {
+    border: 1px solid #ccc;
+    width: 200px;
+    margin: 5px auto;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bolder;
+  }
+  
+  .main-member aside .function .item a button:focus {
+    outline: none;
+  }
+  
+  .main-member aside .function .item a button:hover {
+    background-color: #aac0cf;
+  }
+  
+  .main-member aside .function .item a button:hover span {
+    padding-right: 25px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  .main-member aside .function .item a button:hover span:after {
+    opacity: 1;
+  }
+  
+  .main-member aside .function .item a button span {
+    position: relative;
+  }
+  
+  .main-member aside .function .item a button span::after {
+    content: '➜';
+    opacity: 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    position: absolute;
+    right: -10px;
+    font-weight: bold;
+  }
+  
+  .main-member aside .function label {
+    padding: 10px 0;
+    font-size: 13px;
+    font-weight: bolder;
+  }
+  
+  
+  .main-member main {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 1px 2px 2px white;
+    border-radius: 2px;
+/*     border: 1px solid #ccc; */
+  }
+  
+  .main-member main .info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 50px;
+  }
+  
+  .main-member main .info div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 20px auto;
+  }
+  
+  .main-member main .info div h3 {
+    width: 100px;
+    font-weight: bold;
+    padding: 5px 10px;
+  }
+  
+  .main-member main .info div label {
+    width: 200px;
+  }
+  
+  .main-member main .info div button {
+    background-color: #ccc;
+    font-size: 50px;
+    border: none;
+  }
+  
+  /*搜尋框*/
+   .container_search{
+      margin: 10px 20px 20px 15px;
+  }
+  #order_number{
+  	  width:140px;
+      line-height: 38px;
+      margin-right: 10px;
+  }
+  .input_area{
+		
+      border-radius: 20px;
+      margin-right: 8px;
+  }
+  .submit_btn{
+      border: none;
+      padding: 0 10px;
+      line-height: 35px;
+      font-size: 1.4rem;
+      color: #BE5555;
+      border-radius: 50%;
+  }
+  .submit_btn:hover{
+      background-color: #BE5555;
+      border-radius: 50%;
+  }
+
+
+
+
+/*表單製作*/
+  main{
+            
+    width: 100%;
+    
+}
+
+/* form{
+    
+} */
+#hcg_tabs {
+    width: 100%;
+    
+}
+#tabs-nav{
+   
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#tabs-nav a{
+
+    text-decoration: none;
+    flex-grow: 1;          /*子元素平均寬度*/
+    text-align: center;
+    padding: 10px;
+
+}
+
+/* 一開始先讓其他的子元素消失起來  只留下第一個tabs-panel元素 */
+.tabs-content .tabs-panel{
+    display: none;
+}
+
+#tabs-nav .change{
+    background-color: orange;
+    color: white;
+}
+
+/* 圖片適應td */
+.img-tr{
+    display: table-row;
+    height: 100px;
+}
+.img-td{
+    display: table-cell;
+    /* width: 100px; */
+    /* align-items: center; */
+    /* text-align: center; */
+    vertical-align: middle;
+    /* table-layout: fixed; */
+
+}
+.img-td img{
+    width: 100%;
+    height: 150px;
+    display:block;
+}
+
+/* 訂單處理CSS*/
+.order-info{
+
+    text-align: center;
+}
+/* .order-nav{
+} */
+.order-nav th{
+    /* border: 1px solid red; */
+    width: 100%;
+}
+
+
+
+/************ CSS Animation ***********/
+
+.animated-tabs{
+    animation-duration: 1.5s;
+    animation-fill-mode:forwards;   /*forwards 就是動畫結束後保持最後結束的樣子*/
+}
+.fadeIn { 
+    animation-name: fadeIn; 
+}
+
+@keyframes fadeIn { 
+    0% {opacity: 0;} 
+    100% {opacity: 1;} 
+} 
+
+/* 總訂單數量 */
+.orderTitle{
+	text-align: left;
+    margin-left: 20px;
+    margin-bottom: 4px;
+    font-size: 1.1rem;
+}
+table{
+    width: 100%;
+    font-weight: bold;
+    table-layout:fixed;
+    word-break:break-all;
+}
+
+tr,td{
+/*     border: 1px solid #ccc; */
+    font-weight: 500;
+	border-bottom: 1px solid #ddd;
+    padding: 15px 5px ;
+/*     border-top: 0; */
+/*     border-left: 0; */
+    
+}
+
+.imgTD{
+    overflow: hidden; 
+}
+/* .imgTD img{
+     width: 100%;
+
+} */
+
+.btCancel{
+    text-align: right;
+}
+.btCancel button{
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+/* 跑馬燈開始 */
+#Marquee{
+  /* border: 1px solid red; */
+  display: flex;
+/*   padding-left: 160px; */
+  align-items: center;   
+}
+#Marquee h3{
+  /* border: 1px solid red; */
+  font-size: 1rem;
+  padding: 5px;
+}
+#Marquee ul{
+  /* border: 1px solid red; */
+  list-style:none;
+  height:30px;
+  overflow:hidden;
+  /* display: flex; */
+  /* flex-direction: column;*/
+  
+}
+#Marquee ul li:first-child{
+  /* border: 1px solid red; */
+  margin: 7px 0;
+
+}
+/* 跑馬燈結束 */
+
+
+/*產品詳情*/
+h3{
+	letter-spacing: 2px;
+/* 	border-bottom: 1px solid #cccc; */
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    padding-left: 30px;
+}
+h4{
+	padding-left: 30px;
+	color: orange;
+}
+.product_images{
+  width: 100px;
+  height: 120px;
+}
+.descArea{
+    padding: 10px 30px;
+    padding-bottom: 15px;
+}
+.tableArea{
+	padding: 10px 30px;
+}
+.descTitle, .descContent,.content .total{
+	letter-spacing: 2px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.descContent{
+	font-weight:300;
+}
+.total{
+	color: #BE5555;
+}

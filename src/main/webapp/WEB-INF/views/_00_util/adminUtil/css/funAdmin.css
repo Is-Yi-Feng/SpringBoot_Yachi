@@ -1,0 +1,79 @@
+@charset "UTF-8";
+/* 功能選單 */
+.box{
+	margin-top:250px;   /*讓header與下方內容有距離*/
+}
+
+.administrator{
+            
+    display: flex;
+}
+aside{
+    /* border: 1px solid #ccc; */
+    /* width: 500px; */
+    /* height: 1050px; */
+    text-align: center;
+}
+aside .function{
+    display: flex;
+    flex-direction: column; 
+}
+.function h3{
+    font-size: 24px;
+    padding: 20px 0;
+    font-weight:bolder;
+}
+.function img{
+    vertical-align: bottom;   /*解決圖片底下留白問題*/
+}
+.function .item img:hover{
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.function label{
+    padding: 10px 0;
+    font-size: 13px;
+    font-weight:bolder;
+    
+}
+.function button{
+    border: 1px solid #ccc;
+    width: 200px;
+    margin: 5px auto;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight:bolder;          
+}
+.function .item:last-child{
+    margin-top:125px;          
+}
+
+/*按鈕動畫*/
+.function button:focus{
+    outline: none;
+}
+.function button:hover{
+    
+    background-color: rgb(170, 192, 207);
+}
+
+.function button span{
+   
+    position: relative;
+}
+.function button:hover span{
+    padding-right: 25px;
+    transition: 0.5s;
+}
+.function button span:after{
+    content: '➜';
+    opacity: 0;
+    transition: 0.5s;
+    position: absolute;
+    
+    right: -10px;
+    font-weight: bold;
+}
+.function button:hover span:after{
+    opacity: 1;
+}

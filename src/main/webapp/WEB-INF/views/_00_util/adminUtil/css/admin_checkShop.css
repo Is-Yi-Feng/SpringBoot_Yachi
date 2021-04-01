@@ -1,0 +1,22 @@
+
+/* 商家 */
+#shopTitle{
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.shopList{
+    background: #fff;
+    cursor: pointer;
+    padding: 15px 0;
+    /* margin-bottom: 20px; */
+    border-radius: 5px;
+    border-bottom: 1px solid #ccc;
+}
+.shopDetail{
+    background: #fff;
+    padding-top:15px;
+    padding-bottom: 30px;
+    margin-bottom: 10px;
+    border-bottom: 10px solid #ccc ;
+}

@@ -1,0 +1,339 @@
+
+
+/* .clearfix{
+    clear: both;
+} */
+#header_container{
+    max-width: 100%;
+    height: 100px;
+    background: purple;
+}
+.header_image>img{
+    max-width: 100%;
+}
+
+/* 商品標頭 */
+.new_container{
+    /* background: #aaaaaa; */
+    margin: 50px 0;
+    padding: 10px 0;
+}
+.new_product{
+    padding: 10px 0;
+    text-align: center;
+    /* background: #cccccc; */
+}
+.new_product h1{
+    position: relative;
+    display: inline-block;
+    letter-spacing: 8px;
+    color: #777777;
+} 
+.new_product h1::before{   /*讓括號在主要文字前面*/
+    content: "";
+    position: absolute;
+    background: url(../images_2/左邊中括號.png) no-repeat;
+    width: 30px;
+    height: 45px;
+    top: -5px;
+    left: -40px;
+    background-size: contain;
+    opacity: 0.5;
+}
+.new_product h1::after{   /*讓括號在主要文字後面*/
+    content: "";
+    position: absolute;
+    background: url(../images_2/右邊中括號.png) no-repeat;
+    width: 30px;
+    height: 45px;
+    top: -5px;
+    right: -40px;
+    background-size: contain;
+    opacity: 0.5;
+}
+
+#main{
+    /* margin-top: 500px; */
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* 商品大區塊 */
+.shoppingArea{
+    position: relative;
+    display: flex;
+}
+
+
+
+/* 右半邊區塊  使用頁面： 2_shopping.html  3_商品頁面 */   
+.right_container{
+    position: absolute;
+    /* display: flex;
+    flex-wrap: wrap; */
+    right: 0;
+    width: 73%;
+    padding-top: 30px;
+    background: #EDD9D9;
+    border-radius: 5px;
+}
+.productBox{
+    padding: 0 30px;
+}
+/* 商品資訊照片 */
+.productUpBox{
+    display: flex;
+    justify-content:space-between;
+    margin-bottom: 50px;
+    /* background-color: green; */
+}
+.productImage{
+    width: 60%;
+}
+.productImage img{
+    width: 100%;
+    height:550px;
+}
+
+/* 商品資訊 */
+.productIntro{
+    position: relative;
+    width: 35%; ;
+    
+    /* background-color: purple; */
+}
+/* 商品資訊元素共用屬性 */
+.productName h3, .inputCountBox, .selectSizeBox, .cartBtn, .buyBtn, .productName h4,.dropdownList li{
+  letter-spacing: 4px;
+  color: #444444;
+}
+.productName h3{
+  display: inline-block;
+}
+.productName span{
+  cursor: pointer;
+  color: #555555;
+}
+.productName h4, .productName h3{
+  margin-top: 0;
+  margin-bottom: 10px;
+  
+}
+/* 讓價格與數量在同一列，並且各自左右擺放 */
+.productPrice{
+/*     display: flex; */
+/*     justify-content: space-between; */
+/*     margin:15px 0; */
+}
+.productPrice span{
+/*     letter-spacing: 1px; */
+/*     font-size:1.1rem; */
+/*     color:#BE5555; */
+}
+.productInfoo{
+	margin-bottom: 12px;
+}
+.spanHeader{
+	font-size: 1.1rem;
+    letter-spacing: 4px;
+    color: #444;
+}
+.spanContent{
+	font-size: 1.2rem;
+    letter-spacing: 2px;
+    color: #555;
+}
+.selectCountBox,.selectSizeBox{
+    display: flex;
+    justify-content: space-between;
+    color: #555555;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e6b3b3;
+    padding-bottom: 32px;
+}
+.selectCountBox label,.selectSizeBox label{
+  align-self: center;
+  font-size:1.2rem;
+}
+/* input寬度 與 select 框 是 包住它的div的72% */
+.selectCountBox select, .selectSizeBox select{
+    width: 72%;
+    padding: 5px 0;
+    border-radius: 3px;
+    border: 1px #ccc solid;
+    color: #aaaaaa;
+}
+.selectCountBox select:focus, .selectSizeBox select:focus{
+    outline: none;
+}
+
+/* 按鈕部分 */
+.shopBtn{
+    display: flex;
+    justify-content: space-between;
+}
+.cartBtn a, .buyBtn input{
+	border:none;
+	outline:none;
+	display:inline-block;
+    width: 7rem;
+    height:38px;
+    padding:10px;
+    background-color: #C39C9C;
+    color: #ffffff;
+    border-radius: 2px;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing:2px;
+} 
+
+.cartBtn a:hover,.buyBtn input:hover{
+  border:none;
+  outline:none;
+  background: #d2b3b3;
+  color: #555555;
+}
+
+/* -----------下半部:頁籤-------------------------------------- */
+.tabs_content .tabs_panel{
+  display: none;
+
+}
+.tabs_content{
+  margin-bottom: 50px;
+
+}
+/* #tab_nav{
+  margin-bottom: 50px;
+} */
+#tab_nav a{
+  font-size: 1.1rem;
+  color: #555555;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+#tab_nav .tab_selected{
+  background-color: #C39C9C;
+  color: #ffffff;
+}
+/* 必須讓第一個頁面先出現，其他的tab_panel點到才會出現 */
+
+/* ---------透過jQuery 加入的 動畫(class)------ */
+.animated_tabs{
+  animation-duration: .5s;
+  animation-fill-mode:forwards;   /*forwards 動畫結束後保持最後結束的樣子*/
+}
+.show_panel{ 
+  animation-name: show_panel; 
+}
+/* .product_comment{
+  background-color: rgba(196, 156, 156,0.3);
+  border-radius: 6px;
+  padding: 30px;
+} */
+@keyframes show_panel{
+  from {
+    opacity: 0;
+    animation-timing-function: ease-in-out;
+  } 
+  to {opacity: 1;} 
+}
+
+/* 頁籤第二頁(留言框) */
+#flexbox1 {
+  /* background-color: #b3b7bb; */
+  /* background-color: rgba(195,156,156,.4); */
+  border-radius: 8px;
+  padding: 10px;
+}
+#flexbox1 span {
+  color: #c82333;
+}
+
+.flexitem {
+  margin: 5px 0;
+}
+
+/*頁籤第一頁(商品詳細介紹)*/
+.product_info{
+	height:300px;
+}
+
+
+/* 頁籤第二頁 (評論內容) */
+.commentBox{
+  margin-bottom: 20px;
+  border: 1px rgba(195,156,156,.5) solid;
+  border-radius: 8px;
+  padding-right: 10px;
+  box-shadow: 2px 2px 2px rgba(195,156,156,.5) ;
+ 
+  /* background-color: purple; */
+}
+.memberInfo{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+.putLeft{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.putLeft .memberImage{
+  margin: 0 20px;
+
+  max-width: 5%;
+}
+.memberImage img{
+  width: 100%;
+}
+.putLeft .memberId{
+  width: 170px;
+  font-size: 1.2rem;
+  color: #555
+  ;
+}
+.putLeft .nickname{
+  width: 250px;
+  font-size: 1.2rem;
+  color: #555
+}
+.putLeft .comment_score{
+  font-size: 1.1rem;
+  color: #555
+}
+.commentBox .comment_content{
+  width: 78%;
+  margin: 10px auto;
+  margin-bottom: 30px;
+}
+.memberInfo .fa-ellipsis-v{
+  opacity: .7;
+  cursor: pointer;
+}
+
+/* 點選doMore 會出現下拉選單 */
+.doMore{
+  position: relative;
+}
+/* 讓選單可以出現在外面，不會影響到內文排版 
+.dropdownList{ 
+  /*display: none;  一開始隱藏起來
+  position: absolute;
+  width: 70px;
+  text-align: center;
+  right: -72px;
+  top: 0;
+  background-color: #ffffff;
+}
+.dropdownList li{
+  font-size: 1.1rem;
+  color: #777777;
+  padding: 7px;
+  border: 1px solid #eeeeee;
+}
+.active {
+  display: block;
+}
+*/

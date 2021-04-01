@@ -1,0 +1,108 @@
+
+
+.administrator{
+    margin-top: 250px;   /*拉出上方距離*/        
+    display: flex;
+    
+}
+
+
+/* announcement */
+.announcement {
+    width: 700px;
+    /* border: 2px solid #aaa; */
+    /* border-radius: 20px; */
+    margin-left: 30px;
+    margin-bottom: 2rem;
+}
+.announcement fieldset{
+ height: 250px;
+ border-radius: 20px;
+ margin-bottom: 2rem;
+ border: 2px solid #333;
+}
+.announcement legend {
+    font-size: 30px;
+    width: 200px;
+}
+.announcement a {
+    color: #333;
+}
+.announcement-mid {
+    font-size: 20px;
+    margin-bottom: 2rem;
+    padding-left: 4px; 
+}
+.announcement label{
+    font-size: 20px;
+    font-weight: bold;
+}
+.announcement-mid input{
+    width: 500px;
+    height: 30px;
+}
+.announcement-functionbar table{
+    margin: auto;
+    padding-left: 10px;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+.announcement-functionbar tr{
+    border: 1px solid #333;
+}
+.announcement-functionbar td{
+    font-family: cursive;
+    border: 1px solid #ccc;
+    padding: 3px 30px;
+    background-color: #333;
+    color: #FFF;
+}
+/*第一欄第一列：左上*/
+tr:first-child td:first-child{
+    border-top-left-radius: 10px;
+}
+/*第一欄最後列：左下*/
+tr:last-child td:first-child{
+    border-bottom-left-radius: 10px;
+}
+/*最後欄第一列：右上*/
+tr:first-child td:last-child{
+    border-top-right-radius: 10px;
+}
+/*最後欄第一列：右下*/
+tr:last-child td:last-child{
+    border-bottom-right-radius: 10px;
+}
+textarea,input:focus {  /* 點擊時去除瀏覽器預設文本邊框 */
+    outline: none;
+}
+textarea {
+    padding-left: 5px;
+    /* margin-top: 2.5rem; */
+    margin-left: 9rem;
+    margin-top: 3px;
+    border: 2px solid;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+.announcement-photo:hover {
+    color: red;
+    transition: .3s;
+    cursor: pointer;
+}
+.announcement-button {
+    width: 100px;
+    height: 50px;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-top: 50px;
+    margin-left: 550px;
+    border-radius: 5px;
+}
+.announcement-button:hover {
+    background:rgb(170, 192, 207);
+    transition: .3s;
+    color: red;
+    cursor: pointer;
+    border-radius: 50%;
+}

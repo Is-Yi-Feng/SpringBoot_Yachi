@@ -1,0 +1,179 @@
+
+/* 新增產品按鈕 */
+.editBtn{
+    position: absolute;
+    right: 15px;
+
+}
+.editBtn a{
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    padding: 5px 0;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 2px #ccc;
+    border-radius: 3px;
+    color: #444;
+    transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.editBtn a:hover{
+    background-color: rgba(170,192,207,.5);
+    width: 105px;
+}
+/* 表格 */
+.table{
+    position: relative;
+    /* 使元素的行為類似於表格元素 */
+    /* background: #fff; */
+    display: table;  
+    width: 100%;
+    text-align: center;
+    margin:0;
+    padding:20px 5px 0 5px;
+
+  }
+  .thead{
+    display: table-header-group;
+  }
+  /* 讓div模擬tr格式排列 */
+  .tr{
+    display: table-row;
+  }
+  .th{
+    padding: 0 20px 10px;
+    font-weight: 600;;
+  }
+  .td ,.th{
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .table .thead .tr .th{
+    border-bottom: 1px solid #ccc;
+  }
+  .table .td{
+    padding: 2rem 1.5rem;
+    /* position: relative; */
+  }
+ 
+  .table .tbody .tr .td{
+    border-bottom: 5px solid #ddd;
+    margin-bottom: 10px;
+}
+  /* .table .pic{
+    width: 30%;
+  } */
+  .table .name{
+    text-align: left;
+  }
+  .tbody{
+    display: table-row-group;
+  }
+ 
+  .tbody .pic{
+    width: 17%;
+  }
+  .tbody .pic img{
+    width: 100%;
+    height:50px;
+  }
+  .tbody .name a{
+    /* display是block才可以給margin屬性 */
+    display: block;
+    margin-bottom: 10px;
+    color: #555;
+    font-weight:600;
+    transition:.2s;
+  }
+  .tbody .name a:hover{
+  font-size:1.1rem;
+  }
+  .tbody .count select{
+    padding-right: 20px;
+    outline: none;
+    color: #777;
+  }
+  .tbody .edit i, .tbody .delete i{
+    color: #555;
+    transition:.2s;
+  }
+	.tbody .edit i:hover{
+	color:black;
+ }
+ 	.tbody .delete i:hover{
+ 	color:black;
+ }
+
+
+
+
+  /* -----------下半部:頁籤-------------------------------------- */
+.tabs_content .tabs_panel{
+    display: none;
+  }
+  #tab_nav{
+    margin-bottom: 50px;
+  }
+  #tab_nav a{
+    text-align: center;
+    display: inline-block;
+    width: 110px;
+    font-size: 1.1rem;
+    padding: 3px 0;
+    color: #555555;
+    border: 1px solid #ccc;
+    box-shadow:1px 1px 2px #ccc; 
+    border-radius: 3px;
+  }
+  #tab_nav a:hover{
+  background-color: rgba(170,192,207,.5);
+  width: 105px;
+  }
+  #tab_nav .tab_selected{
+    border-radius: 3px;
+    background-color: rgb(170,192,207);
+    color: #444;
+  }
+  .content_selected{
+      background-color: rgb(239,239,239);;
+  }
+  /* 必須讓第一個頁面先出現，其他的tab_panel點到才會出現 */
+  
+  /* ---------透過jQuery 加入的 動畫(class)------ */
+  .animated_tabs{
+    animation-duration: .5s;
+    animation-fill-mode:forwards;   /*forwards 動畫結束後保持最後結束的樣子*/
+  }
+  .show_panel{ 
+    animation-name: show_panel; 
+  }
+  .product_comment{
+    background-color: rgba(196, 156, 156,0.3);
+    border-radius: 6px;
+    padding: 30px;
+  }
+  @keyframes show_panel{
+    from {
+      opacity: 0;
+      animation-timing-function: ease-in-out;
+    } 
+    to {opacity: 1;} 
+  }
+  
+   
+
+
+
+
+  /* 頁籤第二頁(下架中) */
+
+  
+  
+  
+  /* 頁籤第二頁 (缺貨中) */
+  .title{
+    text-align: left;
+    padding: 10px 0 5px 47px;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    color: rgb(40 112 161);
+  }

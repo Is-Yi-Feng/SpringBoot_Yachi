@@ -1,0 +1,178 @@
+.main-member {
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 10rem;
+}
+
+.main-member aside {
+/*   border: 1px solid #CCC; */
+  width: 500px;
+  /* background-color: #ccc; */
+  text-align: center;
+}
+
+.main-member aside .function {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-member aside .function h3 {
+  font-size: 24px;
+  padding: 20px 0;
+  font-weight: bolder;
+}
+
+.main-member aside .function .item:last-child {
+  margin-top: 125px;
+}
+
+.main-member aside .function .item img {
+  vertical-align: bottom;
+}
+
+.main-member aside .function .item img:hover {
+  opacity: 0.5;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.main-member aside .function .item a button {
+  border: 1px solid #ccc;
+  width: 200px;
+  margin: 5px auto;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bolder;
+}
+
+.main-member aside .function .item a button:focus {
+  outline: none;
+}
+
+.main-member aside .function .item a button:hover {
+  background-color: #aac0cf;
+}
+
+.main-member aside .function .item a button:hover span {
+  padding-right: 25px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.main-member aside .function .item a button:hover span:after {
+  opacity: 1;
+}
+
+.main-member aside .function .item a button span {
+  position: relative;
+}
+
+.main-member aside .function .item a button span::after {
+  content: '➜';
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: absolute;
+  right: -10px;
+  font-weight: bold;
+}
+
+.main-member aside .function label {
+  padding: 10px 0;
+  font-size: 13px;
+  font-weight: bolder;
+}
+
+
+.main-member main {
+  width: 100%;
+  background-color: white;
+/*   border: 1px solid #ccc; */
+}
+
+.main-member main .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 50px;
+}
+
+
+/* .main-member main .info div { */
+/*   display: -webkit-box; */
+/*   display: -ms-flexbox; */
+/*   display: flex; */
+/*   margin: 20px auto; */
+/* } */
+
+/* .main-member main .info div h3 { */
+/*   width: 100px; */
+/*   font-weight: bold; */
+/*   padding: 5px 10px; */
+/* } */
+
+/* .main-member main .info div label { */
+/*   width: 200px; */
+/* } */
+
+/* .main-member main .info div button { */
+/*   background-color: #ccc; */
+/*   font-size: 50px; */
+/*   border: none; */
+/* } */
+
+
+.main-member main .info div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 20px auto;
+
+  align-items: center;
+  justify-content: center;
+}
+.editPhoto{
+  text-align: center;
+}
+
+
+.main-member main .info div h3 {
+  width: 150px;
+  font-weight: bold;
+  padding: 5px 10px;
+  text-align: right;
+}
+
+.main-member main .info div label {
+  width: 200px;
+}
+
+.main-member main .info div button {
+  background-color: #ccc;
+  font-size: 50px;
+  border: none;
+}
+.info div button:focus{
+  outline: none;
+}
+
+.info input{
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 10px;
+}
+.info input:focus{
+  outline: none;
+}
+

@@ -1,0 +1,341 @@
+
+/* slider */
+/* #sliderContainer{ */
+/*   width: 50%; */
+/*   margin: 0 auto; */
+/* } */
+/* .slick-slider:focus{ */
+/*   outline: none; */
+/* } */
+/* .image{ */
+/*     max-width: 100%; */
+/*     height: 500px; */
+/*     border: 1px solid #cccccc; */
+/* } */
+/* .slider .image img{ */
+/*   width: 100%; */
+/* } */
+
+/* boostrap slider 樣式 */
+.carousel-inner{
+  width: 50%;
+  margin: 0 auto;
+}
+.carousel-control-prev{
+  left:20%;
+}
+.carousel-control-next{
+  right: 20%;
+}
+.carousel-item img{
+	height: 500px;
+}
+
+/* 箭頭的樣式 */
+.slick-prev,.slick-next{
+  z-index: 100;
+
+  /* background: black */
+}
+.slick-prev:before, .slick-next:before{
+  color: rgba(255, 255, 255, 0.6);
+}
+.slick-prev{
+  left: 10px;
+}
+.slick-next{
+  right: 10px;
+}
+
+/* slider 按鈕樣式 */
+.slick-dots{
+  bottom: 14px;
+}
+
+
+
+/* sessionLeft */
+#secondContainer{
+    /* position: relative; */
+    margin-top: 2%;
+    /* padding: 0 12%; */
+    /* width: 100%; */
+    /* padding-left: 142px; */
+    /* float: left; */
+}
+#sectionLeft{
+    /* width: 70%; */
+    /* margin-left: 145px; */
+}
+.addCoupon{
+    display: flex;
+}
+.addCoupon div{
+    max-width: 600px;
+    padding: 10px;
+}
+.couponInfo h3{
+    color:#F26419 ;
+}
+.couponInfo h4{
+    color: #F6AE2D;
+    margin-top: 10px;
+    border-top: 1px solid rgba(204, 204, 204, .5);
+}
+.couponInfo{
+    width: 600px;
+    border: 1px solid #cccccc;
+    margin: 5px 0px;
+    border-radius: 8px;
+    /* color: #d5573b; */
+}
+#shopInfo{
+    /* border: 3px solid #cccccc; */
+    /* width: 70%; */
+    margin-left: 12px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    /* text-align: center; */
+}
+.fa-star{
+    color:#F6AE2D;
+}
+
+/* 留言區 */
+#comment{
+    margin-top: 20px;
+}
+
+#flexbox1 {
+  background-color: rgba(179, 183, 187,.3);
+
+  border-radius: 8px;
+  padding: 10px;
+}
+#flexbox1 span {
+  color: #c82333;
+}
+
+.flexitem {
+  margin: 5px 0;
+}
+
+/* 留言內容 */
+.commentBox{
+  margin-bottom: 20px;
+  border: 1px rgba(179, 183, 187,.3) solid;
+  border-radius: 8px;
+  padding-right: 10px;
+  box-shadow: 2px 2px 2px rgba(179, 183, 187, .5) ;
+ 
+  /* background-color: purple; */
+}
+.memberInfo{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+.putLeft{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.putLeft .memberImage{
+  margin: 0 20px;
+
+  max-width: 5%;
+}
+.memberImage img{
+  width: 100%;
+}
+.putLeft .memberId{
+  width: 170px;
+  font-size: 1.2rem;
+  color: #555
+  ;
+  font-weight:900;
+}
+.putLeft .nickname{
+  width: 250px;
+  font-size: 1.2rem;
+  color: #555
+}
+.putLeft .comment_score{
+  font-size: 1.1rem;
+  color: #555
+}
+.commentBox .comment_content{
+  width: 78%;
+  margin: 0px auto;
+/*   margin-bottom: 30px; */
+}
+.memberInfo .fa-ellipsis-v{
+  opacity: .7;
+  cursor: pointer;
+}
+
+
+
+
+/* fixedRight */
+#RightBorder{
+    /* position: absolute; */
+    height: 1500px;
+    /* right: 13%; */
+    /* right: 0; */
+    top: 0px;
+    /* background: rgb(207, 255, 207); */
+    
+}
+#shopPhone{
+    border-radius: 8px;
+    /* position: sticky;
+    position: -webkit-sticky;
+    right: 60px;
+    top:0px;
+    background: pink;
+    width: 230px;
+    padding: 10px; */
+    position: sticky;
+    position: -webkit-sticky;
+    /* border: 1px solid #cccccc; */
+    background: rgba(123,136,111,0.1);
+    top: 0px;
+    width: 350px;
+    height: 900px;
+    padding: 20px;
+    
+}
+
+#shopPhone .item{
+    /* background: green; */
+    margin-bottom: 10px;
+    display: flex;
+    text-align: left;
+}
+
+#shopPhone .item .item-left{
+    /* height: 30px; */
+    /* background: green; */
+    width: 20%;
+    padding: 10px 0;
+    /* color: #7b886f; */
+    font-size: 20px;
+}
+#shopPhone .item .item-right{
+    /* height: 30px; */
+    width: 80%;
+    /* background: red; */
+    padding: 10px 0;
+    text-align: left;
+    font-size: 16px;
+    color: #d5573b;
+}
+#shopPhone .item .item-right a{
+    font-size: 16px;
+    color: #d5573b;
+
+}
+#shopPhone .item .item-right a:hover{
+    opacity: 0.5;
+}
+
+
+#go-top {
+	position: fixed;  /* 畫面滾動時一直出現 */
+    right: 20px;
+    bottom: 35px;
+    width: 40px;
+    height: 40px;
+    background:rgba(123,136,111,0.3);
+    color:#fff;
+    text-align: center;  /* 左右置中 */
+    line-height: 40px;   /* 上下置中 */
+    text-decoration: none;
+    border-radius: 50%;
+}
+#go-top:hover{
+    background:rgba(123,136,111,1);
+
+}
+
+/* 顯示星星評價 */
+/* 評價星星 */
+.ratings {
+    position: relative;
+    bottom: 20%;
+/*     left: 4%; */
+    vertical-align: middle;
+    display: inline-block;
+    color: #b1b1b1;
+    overflow: hidden;
+}
+.full-stars {
+    position: absolute;
+    left: 0;
+    top: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #fde16d;
+}
+.empty-stars:before, .full-stars:before {
+    content:"\2605\2605\2605\2605\2605";
+    font-size: 15pt;
+}
+.empty-stars:before {
+    -webkit-text-stroke: 1px #848484;
+}
+.full-stars:before {
+    -webkit-text-stroke: 1px orange;
+}
+/* Webkit-text-stroke is not supported on firefox or IE */
+
+/* Firefox */
+@-moz-document url-prefix() {
+    .full-stars {
+        color: #ECBE24;
+    }
+}
+
+/* 評分星星樣式 */
+/* .rate { */
+/* 	float: left; */
+/* 	height: 46px; */
+/* 	padding-bottom: 10px; */
+/* } */
+
+/* .rate:not(:checked)>input { */
+/* 	display: none; */
+/* } */
+
+/* .rate:not(:checked)>label { */
+/* 	float: right; */
+/* 	width: 1em; */
+/* 	overflow: hidden; */
+/* 	white-space: nowrap; */
+/* 	cursor: pointer; */
+/* 	font-size: 30px; */
+/* 	color: #ccc; */
+/* } */
+
+/* .rate:not(:checked)>label:before { */
+/* 	content: '★ '; */
+/* } */
+
+/* .rate>input:checked ~ label { */
+/* 	color: #ffc700; */
+/* } */
+
+/* .rate:not(:checked)>label:hover, .rate:not(:checked)>label:hover ~ label */
+/* 	{ */
+/* 	color: #deb217; */
+/* } */
+
+/* .rate>input:checked+label:hover, .rate>input:checked+label:hover ~ label, */
+/* 	.rate>input:checked ~ label:hover, .rate>input:checked ~ label:hover ~ */
+/* 	label, .rate>label:hover ~ input:checked ~ label { */
+/* 	color: #c59b08; */
+/* } */
+
+   

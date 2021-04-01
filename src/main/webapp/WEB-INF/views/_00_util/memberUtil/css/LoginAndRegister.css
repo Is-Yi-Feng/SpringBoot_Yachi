@@ -1,0 +1,342 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "微軟正黑體";
+  background-color: #ccc;
+  /* 垂直置中*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* 佔滿整個 view */
+  /* 可以垂直置中 */
+  height: 100vh;
+  /* animation 動畫實現切換效果 */
+  /* 左邊的登入頁面切換至右側 */
+  /* '#container' 增加 .toRightAction類 */
+  /* .toRightAction 下面的 .login-container 水平X軸移動 translateX(100%)*/
+  /* 右邊的 "沒有帳號?" 切換至左邊 */
+  /* 註冊頁覆蓋登入頁  */
+  /* over覆蓋頁回到右邊*/
+  /* 原本是 transform: translateX(-20%) */
+  /* 這樣會有左邊滑動的效果*/
+}
+
+body .container {
+  background-color: white;
+  border-radius: 10px;
+  /* 水平陰影, 垂直陰影 , 第三個參數。此值越大，模糊越大，陰影變得越來越大 */
+  -webkit-box-shadow: 25px 25px 25px rgba(0, 0, 0, 0.25);
+          box-shadow: 25px 25px 25px rgba(0, 0, 0, 0.25);
+  position: relative;
+  width: 900px;
+  height: 500px;
+  /* 覆蓋頁面處理 */
+}
+
+body .container .form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+  /* 註冊頁面另外處理 */
+  /* 登入頁面另外處理 */
+}
+
+body .container .form-container form {
+  background-color: white;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /*對齊Y軸中間*/
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /*對齊X軸中間*/
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container .form-container form h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+body .container .form-container form .social-container {
+  margin: 5px 0;
+}
+
+body .container .form-container form .social-container a {
+  border-radius: 50%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 2rem;
+  height: 2rem;
+}
+
+body .container .form-container form span {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+body .container .form-container form .input-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin-right: 50px;
+}
+
+body .container .form-container form .input-div label {
+  width: 5rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  /*靠右對齊*/
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  /* 對齊Y軸置中*/
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container .form-container form .input-div input {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 5px;
+  margin: 5px 10px;
+}
+
+body .container .form-container form .input-div input:focus {
+  outline: none;
+}
+
+body .container .form-container form .input-date {
+  position: relative;
+  right: 9.5px;
+}
+
+body .container .form-container form a {
+  font-size: 0.875rem;
+  padding: 5px;
+  text-decoration: none;
+}
+
+body .container .form-container form .btn {
+  border-radius: 20px;
+  border: 1px solid #e46161;
+  background-color: #e46161;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 8px 45px;
+  letter-spacing: 1px;
+  -webkit-transition: -webkit-transform 1ms ease-in;
+  transition: -webkit-transform 1ms ease-in;
+  transition: transform 1ms ease-in;
+  transition: transform 1ms ease-in, -webkit-transform 1ms ease-in;
+  margin-top: 10px;
+}
+
+body .container .form-container form .btn:active {
+  /* 縮放效果 */
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+body .container .form-container form .btn:focus {
+  outline: none;
+}
+
+body .container .form-container.register-container {
+  left: 0;
+  width: 50%;
+  /* 使隱藏在登入面頁的下面 */
+  opacity: 0;
+  z-index: 1;
+}
+
+body .container .form-container.login-container {
+  left: 0;
+  width: 50%;
+  z-index: 1;
+}
+
+body .container .over-container {
+  background-color: #e46161;
+  position: relative;
+  top: 0;
+  /* 距離父元素 .container 左邊50%*/
+  left: 50%;
+  /* 寬度和 register-container 平分*/
+  width: 50%;
+  height: 100%;
+  /* 打開可以看到2個item2的樣子 */
+  /* 覆蓋掉 -->已有帳號?<-- 超出的頁面 */
+  /* */
+  overflow: hidden;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  /* 權重佔比 */
+  z-index: 50;
+}
+
+body .container .over-container .over {
+  color: #fff;
+  position: absolute;
+  height: 100%;
+  /* 這樣剛好可以佔滿整個父元素 .over-container */
+  width: 200%;
+  /* 父元素原本 left: 50%;*/
+  left: -100%;
+  /* x軸的移動 */
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-transition: -webkit-transform 0.6s ease-in-out;
+  transition: -webkit-transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
+  /* 左邊的 --已有帳號?-- */
+  /* 右邊的 --沒有帳號?-- */
+}
+
+body .container .over-container .over .over-item {
+  position: absolute;
+  top: 0;
+  /* 垂直居中的效果 */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  width: 50%;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform 0.6s ease-in-out;
+  transition: -webkit-transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
+}
+
+body .container .over-container .over .over-item .img-box {
+  width: 250px;
+}
+
+body .container .over-container .over .over-item .img-box img {
+  width: 100%;
+}
+
+body .container .over-container .over .over-item h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+body .container .over-container .over .over-item p {
+  font-size: 0.8rem;
+  line-height: 1rem;
+  /*字體間隔*/
+  letter-spacing: 0.1rem;
+  margin: 20px 0;
+}
+
+body .container .over-container .over .over-item .over-btn {
+  background: white;
+  border-radius: 20px;
+  border: 1px solid #e46161;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 8px 45px;
+  letter-spacing: 1px;
+  -webkit-transition: -webkit-transform 1ms ease-in;
+  transition: -webkit-transform 1ms ease-in;
+  transition: transform 1ms ease-in;
+  transition: transform 1ms ease-in, -webkit-transform 1ms ease-in;
+}
+
+body .container .over-container .over .over-item .over-btn:active {
+  /* 縮放效果 */
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+body .container .over-container .over .over-item .over-btn:focus {
+  outline: none;
+}
+
+
+
+body .container .over-container .over .over-right {
+  right: 0;
+}
+
+body .container.toRightAction .login-container {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+body .container.toRightAction .over-container {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+body .container.toRightAction .register-container {
+  opacity: 1;
+  z-index: 5;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+body .container.toRightAction .over {
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+body .container.toRightAction .over-left {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+body .container.toRightAction .over-right {
+  -webkit-transform: translateX(20%);
+          transform: translateX(20%);
+}
+/*# sourceMappingURL=登入and註冊.css.map */

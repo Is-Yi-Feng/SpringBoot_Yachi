@@ -1,0 +1,192 @@
+li{
+  list-style: none;
+}
+
+/* 容器為body的80% */
+.container{
+  width: 80%;
+  margin:0 auto;
+}
+
+/* shopping_title */
+.shop_title_box{
+  margin-top: 60px;
+}
+.shopping_title{
+  /* background: pink; */
+/*   margin-top: 250px; */
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+.shopping_items{
+  background: #fff;
+  padding: 20px 30px 3px;
+  color: #555;
+}
+.table{
+  /* 使元素的行為類似於表格元素 */
+  /* background: #fff; */
+  display: table;  
+  width: 100%;
+  text-align: center;
+  margin:0;
+}
+.thead{
+  display: table-header-group;
+}
+/* 讓div模擬tr格式排列 */
+.tr{
+  display: table-row;
+}
+.th{
+  padding: 0 20px 10px;
+}
+.td ,.th{
+  display: table-cell;
+  vertical-align: middle;
+}
+.table .thead .tr .th{
+  font-weight:600;
+  border-bottom: 2px solid #ccc;
+}
+.table .td{
+  padding: 1.3rem 1.5rem;
+  /* position: relative; */
+}
+.table .tbody .tr .td{
+  border-bottom: 10px solid rgb(248, 245, 245);
+}
+/* .table .pic{
+  width: 30%;
+} */
+.table .name{
+  text-align: left;
+}
+.tbody{
+  display: table-row-group;
+}
+
+.tbody .pic{
+  width: 11%;
+}
+.tbody .pic img{
+  width: 100%;
+  height:100px;
+}
+.tbody .name a{
+  /* display是block才可以給margin屬性 */
+  font-weight:400;
+  display: block;
+  margin-bottom: 10px;
+  color: #555;
+  transition:.3s;
+}
+.tbody .name a:hover{
+	font-weight:700;
+}
+.tbody .count select{
+  padding-right: 20px;
+  outline: none;
+  color: #777;
+}
+.tbody .delete i{
+  color: #555;
+}
+
+/* 訂單總計 */
+.totalBox{
+  margin-top: 50px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: flex-end;
+  background: #fff;
+  text-align: right;
+}
+.totalBox .total{
+  display: flex;
+  justify-content: space-between;
+  width: 25%;
+  padding: 50px 30px;
+  background: rgb(240, 238, 238);
+  letter-spacing: 2px;
+}
+.totalBox .total span{
+  color: #c57272;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+/* 按鈕 */
+.shopBtn{
+  display: flex;
+  justify-content: space-between;
+}
+.confirmBtn a, .btn a{
+  display:inline-block;
+  width: 7rem;
+  padding:10px;
+  margin-bottom: 50px;
+  background-color: #C39C9C;
+  color: #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+  text-align: center;
+} 
+
+.confirmBtn a:hover,.btn a:hover{
+background: #d2b3b3;
+color: #555555;
+}
+
+/*進度條*/
+.chart_box{
+  margin-top: 250px;
+}
+li.circle_box{
+	width: 60px;
+    height: 60px;
+    background:#aaa;
+    border-radius: 50%;;
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+    color: #eee;
+}
+ul.shop_list{
+  position: relative;
+}
+ul.shop_list li+li{
+  margin-left: 100px;
+}
+ul.shop_list .step2::before{
+  content: '';
+    width: 88px;
+    height: 1px;
+    left: 25%;
+    top: 50%;
+    position: absolute;
+    background: #ccc;
+    vertical-align: middle;
+}
+ul.shop_list .step3::before{
+  content: '';
+    width: 88px;
+    height: 1px;
+    left: 63%;
+    top: 50%;
+    position: absolute;
+    background: #ccc;
+    vertical-align: middle;
+}
+.chart_name{
+	display: inline-block;
+    color: #444;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+ul.shop_list .step2, ul.shop_list  .step3{
+  color: #777;
+  background: white;
+  border: 1px solid #d2d2d2;
+}

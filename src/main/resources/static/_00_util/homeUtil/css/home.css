@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+
+* {
+  font-family: 'Fredoka One', cursive;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 8px rgb(233, 224, 224);
+}
+.login-bg-first {
+background: black;
+/* opacity:0.7; */
+}
+.login-bg-second {
+  
+  background: url(./Night_Market/nightMarket-bg.jpg);
+  height: 600px;
+  padding: 50px 0px 0px 0px ;
+  opacity:0.9;
+  margin-top: -50px;
+  /* color: rgba(red, green, blue, 0.5) ; */
+}
+
+.main {
+  background: url(./img/Vermicelli2.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+.focus h1 {
+  font-size: 3rem;
+}
+div h5 {
+  font-size: 1.3rem;
+}
+
+.night-market-bg-first {
+  background: black;
+  /* opacity:0.7; */
+  }
+.night-market-bg-second{
+  /* background:  #F3F8F2; */
+  opacity:0.9;
+  /* background: url(./Night_Market/nightMarket-bg.jpg); */
+  
+}
+/* 
+.voucher-bg{
+   background: url(./Night_Market/bg-2.jpg);
+  
+} */
+
+
+.jobs{
+  height: 8 00px;
+  background-position: center;
+  background-size: cover;
+  padding: 40px;
+}
+
+
+
+@media screen and (max-width: 768px){
+  .focus h1 {
+    font-size: 4rem;
+  }
+}
