@@ -15,7 +15,7 @@ import com.example.demo._10_member.service.MemberServiceImpl;
 
 
 @SpringBootTest
-class SpringSecurity_YaChiTests {
+class SpringBoot_Test {
 
 	@Autowired
 	MemberServiceImpl memberServiceImpl;
