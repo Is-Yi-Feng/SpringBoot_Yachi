@@ -17,7 +17,6 @@ public interface MemberDao extends JpaRepository<Member, Integer> {
 
 	
 	// 參數一定要和資料庫欄位名稱一致
-	
 	public Member findByUsername(String username);
 	
 	public Member findByMemberId(Integer memberId);
