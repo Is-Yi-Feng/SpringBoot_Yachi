@@ -6,16 +6,12 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.sql.Blob;
 
-import javax.persistence.EntityManager;
-import javax.transaction.Transactional;
-
 import org.hibernate.Session;
-import org.hibernate.Transaction;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.example.demo._00_util.util.SystemUtils2018;
 import com.example.demo._02_model.entity.OrderNumberBean;
