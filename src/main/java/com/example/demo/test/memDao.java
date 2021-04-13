@@ -18,7 +18,6 @@ public class memDao {
 	public Member getMember(Integer memberid) {
 		
 		Session session = factory.getCurrentSession();
-		
 		Member member = session.get(Member.class, memberid);
 		
 		return member;
@@ -36,6 +35,13 @@ public class memDao {
 		
 		return list;
 	}
+	
+	
+	public void update(Member member) {
+		Session session = factory.getCurrentSession();
+		session.update(member);
+	}
+	
 }
 
 

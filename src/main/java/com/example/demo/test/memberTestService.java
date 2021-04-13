@@ -23,5 +23,9 @@ public class memberTestService {
 	public List<Member> getMember2(String name) {
 		return memberDao.getMember2(name);
 	}
+	
+	public void update(Member member) {
+		memberDao.update(member);
+	}
 
 }

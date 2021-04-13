@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.example.demo._10_member.entity.Member;
 
 @Controller
-public class test {
+public class memTest {
 
 	@Autowired
 	memberTestService memberTestService;
@@ -19,9 +19,11 @@ public class test {
 	@ResponseBody
 	public String mem(Integer id) {
 		
-		Member member1 = memberTestService.getMember(id);
+		Member member = memberTestService.getMember(id);
+		member.setFullname("小夫");
+		memberTestService.update(member);
 				
-		return "測試成功"+member1.getFullname();
+		return "測試成功"+member.getFullname();
 	}
 	
 	@RequestMapping("/abc2")
@@ -37,3 +39,8 @@ public class test {
 		return "測試成功";
 	}
 }
+
+
+
+
+

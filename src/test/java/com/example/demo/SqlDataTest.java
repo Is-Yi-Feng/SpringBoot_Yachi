@@ -41,13 +41,14 @@ public class SqlDataTest {
 	
 	@Transactional
 	@Test
-	public void aaa() {
+	public void editOrderRandomNumber() {	
 		
 		OrderNumberBean bean = session.get(OrderNumberBean.class, 1);
 		bean.setRandom_code("123");
 		session.update(bean);
-		
 	}
+	
+	
 	
 	@Test
 	public void ProductTableResetHibernate() {
