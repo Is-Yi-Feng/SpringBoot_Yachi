@@ -138,22 +138,7 @@ public class ProductController {
 		
 		return "_12_shoppingmall/2_shopping";	
 	}
-	
-//	@RequestMapping("sortList")
-//	public List<String> getSortList(){
-//		return service.getAllSorts();
-//	}
-	
-	
-//	@RequestMapping("/productDetail.html")
-//	public String showProductInfo() {
-//		return "3_productDetail";
-//	}
-	
-	
 
-	
-	
 	
 	
 }
